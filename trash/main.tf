@@ -2,7 +2,15 @@
 #This config-file without part backend config
 # When you need init backend use next command: terraform init -backend-config=backend.hcl
 terraform {
-    backend "s3" {}
+    backend "s3" {
+#        # The name of the bucket, which was defined in "aws_s3_bucket"
+#        bucket         = "infra-terraform-state-global-270722"
+        key            = "infra/global/s3/terraform.tfstate"
+#        region         = "eu-central-1"
+#        # Table name in DynamoDB, which was defined in "aws_dynamodb_table"
+#        dynamodb_table = "infra_terraform_state_global_locks_270722"
+#        encrypt        = true
+    }
 }
 
 # Creating a resource "aws_s3_bucket" with name "infra_terraform_state_global-270722"

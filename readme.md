@@ -1,2 +1,2 @@
-# Create AWS S3 Bucket, transfer local terraform.state to remote
+# Create AWS S3 Bucket, transfer local terraform.state to remote with Terragrunt
 
